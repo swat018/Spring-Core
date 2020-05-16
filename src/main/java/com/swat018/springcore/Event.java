@@ -3,23 +3,11 @@ package com.swat018.springcore;
 import javax.validation.constraints.*;
 
 public class Event {
-    Integer id;
+    private Integer id;
+    private String title;
 
-    @NotEmpty
-    String title;
-
-    @NotNull @Min(0)
-    Integer limit;
-
-    @Email
-    String mail;
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
+    public Event(Integer id) {
+        this.id = id;
     }
 
     public Integer getId() {
@@ -30,19 +18,19 @@ public class Event {
         this.id = id;
     }
 
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
