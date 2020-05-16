@@ -1,7 +1,5 @@
 package com.swat018.springcore;
 
-import javax.validation.constraints.*;
-
 public class Event {
     private Integer id;
     private String title;

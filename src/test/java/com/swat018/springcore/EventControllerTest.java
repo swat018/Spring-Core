@@ -10,7 +10,9 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest
+@WebMvcTest({
+        EventConverter.StringToEventConverter.class,
+        EventController.class})
 public class EventControllerTest {
 
     @Autowired
@@ -22,6 +24,5 @@ public class EventControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("1"));
     }
-
 
 }
