@@ -1,3 +1,4 @@
+/*
 package com.swat018.springcore;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,3 +30,4 @@ public class ProxySimpleEventService implements EventService {
         simpleEventService.deleteEvent();
     }
 }
+*/
